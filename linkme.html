@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Funny Yes or No Interaction</title>
+<style>
+  body {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Arial', sans-serif;
+  }
+  .question {
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  .button-container {
+    position: relative;
+    display: inline-block;
+  }
+  .answer-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .answer-button:hover {
+    background-color: #45a049;
+  }
+  .answer-button.no {
+    background-color: #f44336;
+  }
+  .answer-button.no:hover {
+    background-color: #d73833;
+  }
+</style>
+</head>
+<body>
+
+<div class="question">Do you like me?</div>
+<div class="button-container">
+  <button class="answer-button yes">Yes</button>
+  <button class="answer-button no" id="noButton">No</button>
+</div>
+
+<script>
+  document.getElementById('noButton').addEventListener('mouseover', function() {
+    this.style.position = 'absolute';
+    this.style.top = Math.random() * window.innerHeight + 'px';
+    this.style.left = Math.random() * window.innerWidth + 'px';
+  });
+</script>
+
+</body>
+</html>
